@@ -1,0 +1,10 @@
+android/build
+*.iml
+.gradle/
+.idea/
+.vscode/
+.DS_Store
+node_modules/
+.envrc
+.npmrc
+package-lock.json
