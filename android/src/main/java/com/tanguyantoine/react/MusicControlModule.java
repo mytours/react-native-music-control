@@ -156,13 +156,7 @@ public class MusicControlModule extends ReactContextBaseJavaModule implements Co
     }
 
     public void init() {
-        if (init) {
-            // ensure service is running incase it was stopped from resetNowPlaying or stopControl
-            Intent myIntent = new Intent(context, MusicControlNotification.NotificationService.class);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) context.startForegroundService(myIntent);
-            else context.startService(myIntent);
-            return;
-        }
+        if (init) return;
 
         INSTANCE = this;
 
